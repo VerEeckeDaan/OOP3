@@ -7,8 +7,8 @@ int i;
 int array[10];
 int counter = 0;
 
-
 int main()
+
 
 {
 	cout << "The array consist of 10 elements is: ";
