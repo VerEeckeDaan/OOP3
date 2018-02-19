@@ -1,26 +1,48 @@
 #include <iostream>
+#include <cstdlib>
+
 using namespace std;
-
-double sum(double x, double y){
-    // double sum = x + y;
-    // return sum
-    return x + y;
-}
-
-//bool is_adult(int age){
-  //  if (age < 18){
-  //      return false;
-  //  } else {
-  //   return true;
-   // }
-
-    //return age < 18;
-//}
+int i;
+int array[30];
+int odd;
+int max;
+int counter;
 
 int main()
 {
-    double y = sum(14.5,25.0);
+	for (int j = 0;j<30;j++)
+	{
 
-    cout << "Sum = " << y;
-    return 0;
+		i = rand() % 101;
+		 array[i]=i;
+
+	}
+
+	for (int k = 0; k < 30 ; k++)
+	{
+		cout << array[k] << " ";
+
+	}
+
+	for (int l = 0; l < 30 ; l++)
+	{
+		odd = array[0];
+		max = array[0];
+		if (array[l] % 2 != 0 && array[l] > max)
+		{
+			odd = array[l];
+			max = array[l];
+		}
+		if (array[l] % 2 == 0)
+			++counter;
+
+		if (array[l] % 2 == 0 && array[l] > max)
+		{
+			for (int m = 0; m < counter ; m++)
+				cout << array[m];
+
+		}
+	}
+
+	return 0;
 }
