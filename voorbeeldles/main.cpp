@@ -1,19 +1,26 @@
 #include <iostream>
 using namespace std;
+
+double sum(double x, double y){
+    // double sum = x + y;
+    // return sum
+    return x + y;
+}
+
+//bool is_adult(int age){
+  //  if (age < 18){
+  //      return false;
+  //  } else {
+  //   return true;
+   // }
+
+    //return age < 18;
+//}
+
 int main()
 {
-    const int SIZE_X = 5, SIZE_Y = 5, SIZE_Z = 5;
-    double space[SIZE_X][SIZE_Y][SIZE_Z] = {};
-          // Initialize all to zero
+    double y = sum(14.5,25.0);
 
-    for (unsigned int x = 0; x < SIZE_X; x++) {
-        for (unsigned int y = 0; y < SIZE_Y; y++) {
-            for (unsigned int z = 0; z < SIZE_Z; z++) {
-                cout << "space[" << x << "][" << y << "]["
-                    << z << "] = " << space[x][y][z] << endl;
-            }
-        }
-    }
-
+    cout << "Sum = " << y;
     return 0;
 }
