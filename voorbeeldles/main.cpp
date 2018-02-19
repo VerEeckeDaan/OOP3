@@ -1,43 +1,16 @@
 #include <iostream>
-#include <cstdlib>
-#include <ctime>
 
 using namespace std;
-int i;
-int array[10];
-int counter = 0;
-
 
 int main()
-
 {
-	cout << "The array consist of 10 elements is: ";
-	cout << endl;
+    int x = 15;
+    int * pX = &x;
 
-	srand ( time(0) );
+    pX = 45;
 
-	for (int j = 0;j<10;j++)
-	{
-
-		i = rand() % 101;
-
-
-		 if (i != i-1)
-			array[j]=i;
-
-		 else
-		 {
-			i = rand() % 101;
-		 array[j]=i;
-		 }
-	}
-
-	for (int k = 0; k < 10 ; k++)
-	{
-		cout << array[k] << " ";
-
-	}
-	cout << endl;
+    cout << "address of x = " << &x << endl;
+    cout << "address of x = " << pX << endl;
 
 	return 0;
 }
