@@ -4,7 +4,7 @@
 
 using namespace std;
 int i;
-int array[10];
+int array[50];
 int counter = 0;
 
 int main()
@@ -16,7 +16,7 @@ int main()
 
 	srand ( time(0) );
 
-	for (int j = 0;j<10;j++)
+	for (int j = 0;j<50;j++)
 	{
 
 		i = rand() % 101;
@@ -32,7 +32,7 @@ int main()
 		 }
 	}
 
-	for (int k = 0; k < 10 ; k++)
+	for (int k = 0; k < 50 ; k++)
 	{
 		cout << array[k] << " ";
 
