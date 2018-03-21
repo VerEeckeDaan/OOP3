@@ -1,12 +1,20 @@
 #include <iostream>
-#include "motorcycle.h"  //Include of project header
+#include "motorcycle.h"
+#include "engine.h"
 
 using namespace std;
+using namespace Vehicles;
 
-int main() {
+int main(void) {
 
-    Motorcycle moto("Suzuki" ,749 ,246 ,2018 , "GSXS750Z");
-    cout << moto.to_string() << endl;
+    Motorcycle fighter("Ducati" , "Fighter");
+    fighter.setCapacity(600);
+    fighter.setMaxSpeed(230);
+    fighter.setYearOfManufactoring(1998);
+    cout << fighter.to_string() << endl;
+
+    Vehicles::Parts::Engine engine(800, 2, "VN001233234343");
+    cout << engine.to_string() << endl;
 
     return 0;
 }

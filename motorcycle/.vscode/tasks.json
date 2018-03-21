@@ -7,7 +7,7 @@
             "command": "g++",
             "args": [
                 "-Wall", "--std=c++11",
-                "main.cpp",
+                "-g", "main.cpp","motorcycle.cpp","engine.cpp"
                 "-o", "app.exe"
             ],
             "group": {

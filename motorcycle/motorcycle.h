@@ -1,37 +1,34 @@
 #pragma once
 
 #include <string>
+#include "engine.h"
 
-class Motorcycle {
+namespace Vehicles {
 
-    //Constructors
-    public:
-        Motorcycle(std::string brand, int capacity, int maxSpeed, int yearOfManufactoring, std::string model);
+    class Motorcycle {
 
-    //Getters
-    public:
-        int getBrand();
-        std::string getCapacity();
-        int getMaxSpeed();
-        int getYearOfManufactoring();
-        std::string getModel();
+        //Constructors
+        public:
+            Motorcycle(std::string brand, std::string model);
 
-    //Setters
-    public:
-        void setBrand(int brand);
-        void setCapacity(std::string capacity);
-        void setMaxSpeed(int maxSpeed);
-        void setYearOfManufactoring(int yearOfManufactoring);
-        void setModel(std::string model);
+        public:      
+            void setMaxSpeed(unsigned int maxSpeed);
+            void setCapacity(unsigned int capacity);
+            void setYearOfManufactoring(unsigned int yearOfManufactoring);
+            std::string getModel(void);
 
-    public:
-        std::string to_string();
+        public:
+            std::string to_string(void);
 
-    //Attributes
-    private:
-        std::string brand; 
-        int capacity;
-        int maxSpeed;
-        int yearOfManufactoring;
-        std::string model;
+        //Attributes
+        private:
+            std::string brand; 
+            Parts::Engine engine;                      //compositie   
+            unsigned int capacity;              
+            unsigned int maxSpeed;
+            unsigned int yearOfManufactoring;
+            std::string model;
+
+    };
+
 };
